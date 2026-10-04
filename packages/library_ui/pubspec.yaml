@@ -1,0 +1,19 @@
+name: library_ui
+description: Shared widgets and screens. Flutter only, no state management.
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.13.2
+
+resolution: workspace
+
+dependencies:
+  flutter:
+    sdk: flutter
+  library_core:
+    path: ../library_core
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter

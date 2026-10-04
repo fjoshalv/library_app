@@ -1,0 +1,22 @@
+name: library_riverpod
+description: The library app implemented with Riverpod.
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.13.2
+
+resolution: workspace
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_riverpod: ^3.4.3
+  library_core:
+    path: ../library_core
+  library_ui:
+    path: ../library_ui
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter

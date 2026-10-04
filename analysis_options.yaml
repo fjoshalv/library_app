@@ -1,7 +1,11 @@
 include: package:flutter_lints/flutter.yaml
 
 analyzer:
+  errors:
+    # All workspace packages share one resolution, so an undeclared import
+    # still compiles. Fail analysis instead (e.g. riverpod inside library_bloc).
+    depend_on_referenced_packages: error
   exclude:
-    - build/**
-    - android/**
-    - ios/**
+    - "**/build/**"
+    - app/android/**
+    - app/ios/**

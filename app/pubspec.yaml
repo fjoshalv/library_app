@@ -1,0 +1,24 @@
+name: library_app
+description: "App shell with one entry point per state management solution."
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.13.2
+
+resolution: workspace
+
+dependencies:
+  flutter:
+    sdk: flutter
+  library_bloc:
+    path: ../packages/library_bloc
+  library_riverpod:
+    path: ../packages/library_riverpod
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
