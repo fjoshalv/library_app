@@ -39,3 +39,12 @@ In VS Code, use the **Bloc** / **Riverpod** launch configurations.
 flutter analyze        # at the root, analyzes every package
 tool/test_all.sh       # runs the tests of every package
 ```
+
+## Use of AI
+
+I used Claude to discuss the monorepo structure and how to support both state
+management solutions in one project. I proposed the possible approaches, and
+Claude helped me weigh them and explained the parts I didn't know yet.
+
+The code is written by hand, since the point of this project is practice. Claude
+is only used to discuss things that are new to me, not to write the app.
