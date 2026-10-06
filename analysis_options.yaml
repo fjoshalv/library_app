@@ -1,6 +1,14 @@
 include: package:flutter_lints/flutter.yaml
 
+formatter: 
+  trailing_commas: preserve
+  page_width: 80
+
 analyzer:
+  
+  
+    
+  
   errors:
     # All workspace packages share one resolution, so an undeclared import
     # still compiles. Fail analysis instead (e.g. riverpod inside library_bloc).
@@ -9,3 +17,4 @@ analyzer:
     - "**/build/**"
     - app/android/**
     - app/ios/**
+  

@@ -1,6 +1,6 @@
 name: library_app
 description: "App shell with one entry point per state management solution."
-publish_to: 'none'
+publish_to: "none"
 version: 0.1.0+1
 
 environment:
@@ -15,6 +15,8 @@ dependencies:
     path: ../packages/library_bloc
   library_riverpod:
     path: ../packages/library_riverpod
+  library_core:
+    path: ../packages/library_core
 
 dev_dependencies:
   flutter_test:

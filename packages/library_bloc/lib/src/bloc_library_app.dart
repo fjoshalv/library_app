@@ -1,14 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:library_core/library_core.dart';
 import 'package:library_ui/library_ui.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-class BlocLibraryApp extends StatelessWidget {
-  const BlocLibraryApp({super.key});
+class const BlocLibraryApp({
+  super.key,
+  required this.environment,
+}) extends StatelessWidget {
+  final Environment environment;
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'Library (Bloc)',
-      home: HomeView(title: 'Bloc'),
+    return MultiRepositoryProvider(
+      providers: [
+        RepositoryProvider.value(value: environment),
+      ],
+      child: const MaterialApp(
+        title: 'Library (Bloc)',
+        home: HomeView(title: 'Bloc'),
+      ),
     );
   }
 }
