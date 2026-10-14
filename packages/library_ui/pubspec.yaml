@@ -17,3 +17,17 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+flutter:
+  fonts:
+    - family: Literata
+      fonts:
+        - asset: fonts/Literata-SemiBold.ttf
+          weight: 600
+    - family: Figtree
+      fonts:
+        - asset: fonts/Figtree-Regular.ttf
+        - asset: fonts/Figtree-Medium.ttf
+          weight: 500
+        - asset: fonts/Figtree-SemiBold.ttf
+          weight: 600

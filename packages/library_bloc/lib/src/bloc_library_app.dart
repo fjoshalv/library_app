@@ -15,9 +15,12 @@ class const BlocLibraryApp({
       providers: [
         RepositoryProvider.value(value: environment),
       ],
-      child: const MaterialApp(
+      child: MaterialApp(
         title: 'Library (Bloc)',
-        home: HomeView(title: 'Bloc'),
+        theme: AppTheme.light,
+        darkTheme: AppTheme.dark,
+        themeMode: ThemeMode.system,
+        home: const HomeView(title: 'Bloc'),
       ),
     );
   }

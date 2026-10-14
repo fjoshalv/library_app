@@ -2,3 +2,4 @@
 library;
 
 export 'src/home_view.dart';
+export 'src/theme/app_theme.dart';

@@ -16,7 +16,10 @@ class const RiverpodLibraryApp({
       overrides: [environmentProvider.overrideWithValue(environment)],
       child: MaterialApp(
         title: 'Library (Riverpod)',
-        home: HomeView(title: 'Riverpod'),
+        theme: AppTheme.light,
+        darkTheme: AppTheme.dark,
+        themeMode: ThemeMode.system,
+        home: const HomeView(title: 'Riverpod'),
       ),
     );
   }
