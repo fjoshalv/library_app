@@ -1,0 +1,36 @@
+name: Project Integration Workflow
+on: 
+    pull_request:
+        branches: 
+            - develop
+            - master 
+    push:
+        branches:
+            - develop
+            - master   
+jobs:
+    analyze:
+        runs-on: ubuntu-latest
+        steps: 
+            - name: Clone repository
+              uses: actions/checkout@v4
+            - name: Set up Flutter
+              uses: subosito/flutter-action@v2
+              with:
+                channel: stable
+                flutter-version: "3.47.2"
+            - name: Get flutter packages
+              run: flutter pub get
+            - name: Analyze flutter project
+              run: flutter analyze
+            - name: Run all tests
+              run: tool/test_all.sh
+        
+            
+            
+                
+            
+                
+        
+
+    
