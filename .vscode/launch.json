@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Bloc",
+      "request": "launch",
+      "type": "dart",
+      "cwd": "app",
+      "program": "lib/main_bloc.dart",
+      "args": ["--dart-define-from-file=.env"]
+    },
+    {
+      "name": "Riverpod",
+      "request": "launch",
+      "type": "dart",
+      "cwd": "app",
+      "program": "lib/main_riverpod.dart",
+      "args": ["--dart-define-from-file=.env"]
+    }
+  ]
+}

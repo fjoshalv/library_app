@@ -1,0 +1,17 @@
+name: library_core
+description: Models, API client and repositories. Pure Dart, no state management.
+publish_to: "none"
+version: 0.1.0
+
+environment:
+  sdk: ^3.13.2
+
+resolution: workspace
+
+dependencies:
+  dio: ^5.11.1
+
+dev_dependencies:
+  test: ^1.31.1
+  mocktail: ^1.0.5
+

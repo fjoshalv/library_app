@@ -1,19 +1,15 @@
-name: library_app
-description: "A new Flutter project."
+name: library_workspace
 publish_to: 'none'
-version: 0.1.0+1
 
 environment:
   sdk: ^3.13.2
 
-dependencies:
-  flutter:
-    sdk: flutter
+workspace:
+  - app
+  - packages/library_core
+  - packages/library_ui
+  - packages/library_bloc
+  - packages/library_riverpod
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
   flutter_lints: ^6.0.0
-
-flutter:
-  uses-material-design: true
