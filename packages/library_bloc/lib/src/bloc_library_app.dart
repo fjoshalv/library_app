@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:library_core/library_core.dart';
 import 'package:library_ui/library_ui.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class const BlocLibraryApp({
   super.key,
