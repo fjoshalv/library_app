@@ -1,0 +1,9 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions   # watches every `uses:` line in .github/workflows/
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      actions:                          # one PR for all action bumps, not one per action
+        patterns: ["*"]
