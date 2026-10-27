@@ -23,22 +23,44 @@ Dependencies: `app → library_bloc, library_riverpod → library_ui → library
 `library_bloc` and `library_riverpod` never depend on each other. Undeclared imports
 fail `flutter analyze` (`depend_on_referenced_packages` is set to error).
 
+## Environment
+
+The app talks to the Big Book API and needs two values, `API_KEY` and
+`BASE_URL`. Copy the example file and fill them in:
+
+```sh
+cp app/.env.example app/.env           # app/.env is gitignored
+```
+
+They are compile-time defines (`--dart-define-from-file=.env`). Without them the
+app throws a `StateError` on startup.
+
 ## Running
 
 ```sh
 flutter pub get                        # once, at the repo root
 cd app
-flutter run -t lib/main_bloc.dart      # or lib/main_riverpod.dart
+flutter run -t lib/main_bloc.dart --dart-define-from-file=.env
+flutter run -t lib/main_riverpod.dart --dart-define-from-file=.env
 ```
 
-In VS Code, use the **Bloc** / **Riverpod** launch configurations.
+In VS Code, use the **Bloc** / **Riverpod** launch configurations. They already
+pass `--dart-define-from-file=.env`.
 
 ## Checks
 
 ```sh
 flutter analyze        # at the root, analyzes every package
-tool/test_all.sh       # runs the tests of every package
+tool/test_all.sh       # runs the tests of every package that has a test/ dir
 ```
+
+CI runs the same checks on every PR into `develop` or `master` and on pushes to
+them.
+
+## Dart version
+
+The SDK constraint is `^3.13.2`, and the code uses recent language features such
+as primary constructors and dot shorthands (`.get`, `.badResponse`).
 
 ## Use of AI
 
